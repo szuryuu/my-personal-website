@@ -1,0 +1,37 @@
+{{ define "main" }}
+{{ $certifications := site.Data.portfolio.certifications }}
+{{ $groups := slice "Cloud" "DevOps" "Backend" "Network & Security" }}
+<main class="credentials-page" data-certifications>
+  <a class="back-link" href="{{ "/" | relURL }}">&larr; Back to portfolio</a>
+  <header class="credentials-header">
+    <span class="tag">C.</span>
+    <h1>Certifications ({{ len $certifications }})</h1>
+    <p>Verified learning and professional credentials. Hover an entry to reveal its supporting image.</p>
+    <div class="certification-filters" aria-label="Filter certifications by specialty">
+      <button type="button" class="is-active" aria-pressed="true" data-cert-group="All">All ({{ len $certifications }})</button>
+      {{ range $group := $groups }}{{ $matches := where $certifications "group" $group }}<button type="button" aria-pressed="false" data-cert-group="{{ $group }}">{{ $group }} ({{ len $matches }})</button>{{ end }}
+    </div>
+    <div class="certification-filters certification-years" aria-label="Filter certifications by year">
+      <span>Year.</span>
+      <button type="button" class="is-active" aria-pressed="true" data-cert-year="All">All ({{ len $certifications }})</button>
+      {{ range $year := slice "2026" "2025" }}{{ $matches := where $certifications "issued" "like" $year }}<button type="button" aria-pressed="false" data-cert-year="{{ $year }}">{{ $year }} ({{ len $matches }})</button>{{ end }}
+    </div>
+  </header>
+
+  <ol class="certification-list">
+    {{ range $i, $certification := $certifications }}
+    <li class="certification-item" data-certification data-group="{{ $certification.group }}" data-year="{{ substr $certification.issued -4 }}" data-preview="{{ $certification.preview | relURL }}">
+      <span class="certification-number">{{ printf "%02d." (add $i 1) }}</span>
+      <div class="certification-body">
+        <span class="certification-title">{{ $certification.title }}</span>
+        <div class="field"><span>Issuer.</span><span>{{ $certification.issuer }}</span></div>
+        <div class="field"><span>Issued.</span><span>{{ $certification.issued }}</span></div>
+        <div class="field"><span>Info.</span><span>{{ $certification.description }}</span></div>
+        {{ with $certification.verifyUrl }}<div class="field"><span>Verify.</span><a href="{{ . }}" target="_blank" rel="noopener">Credential link &nearr;</a></div>{{ end }}
+        <div class="field"><span>Certificate.</span><a href="{{ $certification.documentUrl | relURL }}" target="_blank" rel="noopener">View PDF &nearr;</a></div>
+      </div>
+    </li>
+    {{ end }}
+  </ol>
+</main>
+{{ end }}

@@ -1,0 +1,8 @@
+baseURL = "https://szuryuu.github.io/"
+languageCode = "en"
+title = "Shafwan Ilham Dzaky"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+relativeURLs = true
+
+[params]
+  description = "Portfolio of Shafwan Ilham Dzaky, a DevOps engineer based in Yogyakarta, Indonesia."

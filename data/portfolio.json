@@ -1,0 +1,89 @@
+{
+  "projects": [
+    {
+      "title": "CloudOps: Azure GitOps Platform",
+      "description": "A production-grade GitOps monorepo deploying a Go/Nginx microservices architecture on a Terraform-provisioned Azure Kubernetes Service (AKS) cluster, featuring decoupled CI/CD and zero-credential security.",
+      "tech": ["Azure", "AKS", "Terraform", "GitHub Actions", "Go (Gin)", "Nginx", "PostgreSQL", "Prometheus"],
+      "year": "2026",
+      "github": "https://github.com/szuryuu/cloudops"
+    },
+    {
+      "title": "Dynamic VMSS Auto-Discovery & Mesh",
+      "description": "An elastic Service Mesh architecture integrating Envoy Proxy with Azure Virtual Machine Scale Sets (VMSS), featuring metric-driven autoscaling and zero-downtime dynamic routing.",
+      "tech": ["Go", "Envoy Proxy", "Terraform", "Azure VMSS", "Cloud-init"],
+      "year": "2026",
+      "github": "https://github.com/szuryuu/auto-discover-vmss"
+    },
+    {
+      "title": "LaporCepat: AI-Powered Disaster Reporting",
+      "description": "A real-time emergency reporting system that replaces manual call centers with an AI pipeline (Groq Whisper STT + Gemini 2.5 Flash) for instant triage and live dispatch.",
+      "tech": ["Nuxt 4", "Groq Whisper AI", "Google Gemini 2.5 Flash", "Firebase", "SSE", "Leaflet"],
+      "year": "2025",
+      "github": "https://github.com/szuryuu/lapor-cepat-bpbd"
+    },
+    {
+      "title": "MySQL Load Test",
+      "description": "A high-performance load testing suite that captures real production traffic via PCAP analysis and replays it with weighted concurrency to accurately simulate database load.",
+      "tech": ["Go", "Gopacket", "Prometheus", "MySQL"],
+      "year": "2025",
+      "github": "https://github.com/szuryuu/mysql-load-test"
+    },
+    {
+      "title": "Azure End-to-End DevOps Pipeline",
+      "description": "A production-ready CI/CD pipeline and immutable infrastructure setup on Azure, featuring automated security scanning, zero-secret authentication, and dynamic telemetry injection.",
+      "tech": ["GitHub Actions", "Terraform", "Docker", "Azure", "Bash"],
+      "year": "2026",
+      "github": "https://github.com/szuryuu/azure-e2e-devops"
+    },
+    {
+      "title": "Dokku Nginx Path",
+      "description": "A Dokku plugin enabling path-based routing for multiple applications under a single domain, featuring automated Nginx configuration merging and unified SSL management.",
+      "tech": ["Bash", "Go", "Nginx", "Dokku"],
+      "year": "2025",
+      "github": "https://github.com/szuryuu/nginx-path-vhost"
+    }
+  ],
+  "timeline": [
+    {
+      "title": "Universitas Pembangunan Nasional \"Veteran\" Yogyakarta",
+      "url": "https://www.upnyk.ac.id/",
+      "roles": [{"title": "Informatics Student", "date": "2026 - Present", "description": "Studying Informatics."}]
+    },
+    {
+      "title": "External Code Reviewer",
+      "roles": [{"title": "Front End Code Reviewer", "date": "Sep 2025 - Present", "description": "Mentored developers through rigorous code reviews, enforcing scalable architecture and secure coding standards."}]
+    },
+    {
+      "title": "Botika",
+      "roles": [
+        {"title": "DevOps Engineer Intern", "date": "Sep 2025 - Apr 2026", "description": "Transitioned to DevOps. Managed CI/CD pipelines, automated server provisioning, and implemented infrastructure monitoring."},
+        {"title": "Full Stack Developer Intern", "date": "Jul 2025 - Aug 2025", "description": "Engineered backend services and optimized database queries to reduce system latency, ensuring the application foundation was ready for scalable deployment."}
+      ]
+    },
+    {
+      "title": "SMK Negeri 2 Depok Sleman",
+      "url": "https://www.smkn2depoksleman.sch.id/",
+      "roles": [{"title": "Network and Application Information Systems", "date": "2022 - 2026", "description": "Completed a vocational program in network and application information systems."}]
+    },
+    {
+      "title": "DBS Foundation Coding Camp",
+      "roles": [{"title": "Full Stack Web Developer", "date": "Jan 2025 - Apr 2025", "description": "Developed end-to-end applications with a strong emphasis on backend architecture, system performance optimization, and secure API integrations."}]
+    }
+  ],
+  "certifications": [
+    {"title": "MikroTik Certified Network Associate (MTCNA)", "issuer": "MikroTik", "issued": "May 2025", "group": "Network & Security", "description": "Certified in network routing, firewall configuration, and secure system administration.", "documentUrl": "/certificates/mtcna.pdf", "preview": "/certificates/previews/mtcna.jpg"},
+    {"title": "Architecting on AWS (Membangun Arsitektur Cloud di AWS)", "issuer": "Dicoding", "issued": "October 2026", "group": "Cloud", "description": "Completed the Architecting on AWS (Membangun Arsitektur Cloud di AWS) course.", "verifyUrl": "https://www.dicoding.com/certificates/JMZVL4RLOXN9", "documentUrl": "/certificates/sertifikat_course_266_3391273_041126152322.pdf", "preview": "/certificates/previews/sertifikat_course_266_3391273_041126152322.jpg"},
+    {"title": "Belajar Dasar Google Cloud", "issuer": "Dicoding", "issued": "September 2026", "group": "Cloud", "description": "Completed the Belajar Dasar Google Cloud course.", "verifyUrl": "https://www.dicoding.com/certificates/6RPNOYE95X2M", "documentUrl": "/certificates/sertifikat_course_337_3391273_041126155335.pdf", "preview": "/certificates/previews/sertifikat_course_337_3391273_041126155335.jpg"},
+    {"title": "Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud", "issuer": "Dicoding", "issued": "September 2026", "group": "Cloud", "description": "Completed the Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud course.", "verifyUrl": "https://www.dicoding.com/certificates/L4PQW50Y7PO1", "documentUrl": "/certificates/sertifikat_course_342_3391273_041126154853.pdf", "preview": "/certificates/previews/sertifikat_course_342_3391273_041126154853.jpg"},
+    {"title": "Belajar Dasar-Dasar DevOps", "issuer": "Dicoding", "issued": "September 2025", "group": "DevOps", "description": "Completed the Belajar Dasar-Dasar DevOps course.", "verifyUrl": "https://www.dicoding.com/certificates/RVZKME2JEXD5", "documentUrl": "/certificates/sertifikat_course_382_3391273_041126161309.pdf", "preview": "/certificates/previews/sertifikat_course_382_3391273_041126161309.jpg"},
+    {"title": "Belajar Jaringan Komputer untuk Pemula", "issuer": "Dicoding", "issued": "September 2025", "group": "Network & Security", "description": "Completed the Belajar Jaringan Komputer untuk Pemula course.", "verifyUrl": "https://www.dicoding.com/certificates/GRX5046E2Z0M", "documentUrl": "/certificates/sertifikat_course_387_3391273_041126161226.pdf", "preview": "/certificates/previews/sertifikat_course_387_3391273_041126161226.jpg"},
+    {"title": "Menjadi Linux System Administrator", "issuer": "Dicoding", "issued": "October 2025", "group": "DevOps", "description": "Completed the Menjadi Linux System Administrator course.", "verifyUrl": "https://www.dicoding.com/certificates/NVP7W426RZR0", "documentUrl": "/certificates/sertifikat_course_423_3391273_041126161108.pdf", "preview": "/certificates/previews/sertifikat_course_423_3391273_041126161108.jpg"},
+    {"title": "Belajar Implementasi CI/CD", "issuer": "Dicoding", "issued": "May 2026", "group": "DevOps", "description": "Completed the Belajar Implementasi CI/CD course.", "verifyUrl": "https://www.dicoding.com/certificates/72ZDM0LRQZYW", "documentUrl": "/certificates/sertifikat_course_428_3391273_041126160156.pdf", "preview": "/certificates/previews/sertifikat_course_428_3391273_041126160156.jpg"},
+    {"title": "Belajar Membangun Arsitektur Microservices", "issuer": "Dicoding", "issued": "May 2026", "group": "DevOps", "description": "Completed the Belajar Membangun Arsitektur Microservices course.", "verifyUrl": "https://www.dicoding.com/certificates/KEXLMYKNRZG2", "documentUrl": "/certificates/sertifikat_course_433_3391273_041126155943.pdf", "preview": "/certificates/previews/sertifikat_course_433_3391273_041126155943.jpg"},
+    {"title": "Belajar Back-End Pemula dengan Python", "issuer": "Dicoding", "issued": "October 2026", "group": "Backend", "description": "Completed the Belajar Back-End Pemula dengan Python course.", "verifyUrl": "https://www.dicoding.com/certificates/L4PQW50W7PO1", "documentUrl": "/certificates/sertifikat_course_743_3391273_041126152534.pdf", "preview": "/certificates/previews/sertifikat_course_743_3391273_041126152534.jpg"},
+    {"title": "Belajar Fundamental Back-End dengan Python", "issuer": "Dicoding", "issued": "October 2026", "group": "Backend", "description": "Completed the Belajar Fundamental Back-End dengan Python course.", "verifyUrl": "https://www.dicoding.com/certificates/07Z6Q41GRZQR", "documentUrl": "/certificates/sertifikat_course_788_3391273_041126101549.pdf", "preview": "/certificates/previews/sertifikat_course_788_3391273_041126101549.jpg"},
+    {"title": "Memulai Pemrograman dengan Python", "issuer": "Dicoding", "issued": "October 2026", "group": "Backend", "description": "Completed the Memulai Pemrograman dengan Python course.", "verifyUrl": "https://www.dicoding.com/certificates/72ZDM0LDQZYW", "documentUrl": "/certificates/sertifikat_course_86_3391273_041126153707.pdf", "preview": "/certificates/previews/sertifikat_course_86_3391273_041126153707.jpg"},
+    {"title": "Belajar Pemrograman Rust untuk Pemula", "issuer": "Dicoding", "issued": "November 2025", "group": "Backend", "description": "Completed the Belajar Pemrograman Rust untuk Pemula course.", "verifyUrl": "https://www.dicoding.com/certificates/0LZ0J4LM0X65", "documentUrl": "/certificates/sertifikat_course_881_3391273_041126160858.pdf", "preview": "/certificates/previews/sertifikat_course_881_3391273_041126160858.jpg"},
+    {"title": "Belajar Dasar Cyber Security", "issuer": "Dicoding", "issued": "September 2026", "group": "Network & Security", "description": "Completed the Belajar Dasar Cyber Security course.", "verifyUrl": "https://www.dicoding.com/certificates/JMZVL4R0OXN9", "documentUrl": "/certificates/sertifikat_course_893_3391273_041126154532.pdf", "preview": "/certificates/previews/sertifikat_course_893_3391273_041126154532.jpg"}
+  ]
+}

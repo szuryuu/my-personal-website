@@ -1,0 +1,98 @@
+{{ define "main" }}
+{{ $portfolio := site.Data.portfolio }}
+<div class="root" data-home>
+  <div class="col-sticky">
+    <div class="col-sticky-top">
+      <section class="section identity">
+        <div class="name-line" data-reveal="profile">
+          <span class="tag">C.</span>
+          <span class="mono">{{ now.Year }}</span>
+          <span class="mono">Shafwan Ilham Dzaky</span>
+        </div>
+        <div class="clock" aria-label="Current time in Yogyakarta and your timezone">
+          <div class="clock-row">
+            <span class="tag">T.</span><span class="mono clock-tz">YOG</span><span class="mono clock-time" data-jakarta-time>--:--:--</span><span class="mono clock-offset">GMT+7</span>
+          </div>
+          <div class="clock-row clock-row-you">
+            <span class="tag tag-hidden">T.</span><span class="mono clock-tz">YOU</span><span class="mono clock-time" data-local-time>--:--:--</span><span class="mono clock-offset" data-local-zone>GMT</span>
+          </div>
+        </div>
+        <a class="credentials-link" href="{{ "certifications/" | relURL }}"><span class="tag">C.</span>Credentials ({{ len $portfolio.certifications }}) &rarr;</a>
+      </section>
+    </div>
+
+    <section class="section skills" aria-labelledby="skills-title">
+      <div class="skills-content">
+        <div class="skills-heading"><span class="tag">K.</span><h2 id="skills-title">Skills</h2></div>
+        <dl class="skills-list">
+          <div class="skill-group"><dt>Infra.</dt><dd>Terraform · Kubernetes · Docker · Azure</dd></div>
+          <div class="skill-group"><dt>Delivery.</dt><dd>GitHub Actions · GitOps · CI/CD · Bash</dd></div>
+          <div class="skill-group"><dt>Reliability.</dt><dd>Prometheus · Grafana · ELK · Envoy</dd></div>
+          <div class="skill-group"><dt>Build.</dt><dd>Go · Nginx · PostgreSQL · Linux</dd></div>
+        </dl>
+      </div>
+      <figure class="interactive-visual">
+        <img src="{{ "interactive-placeholder.jpg" | relURL }}" alt="Shafwan Ilham Dzaky">
+        <figcaption class="visual-caption">{{ sub now.Year 2007 }} years old<br>DevOps Engineer<br>Yogyakarta, Indonesia</figcaption>
+      </figure>
+    </section>
+
+    <div class="col-sticky-bottom">
+      <section class="section socials"><span class="tag">S.</span><div class="socials-links"><a href="https://github.com/szuryuu" target="_blank" rel="noopener">GitHub</a><a href="https://linkedin.com/in/shafwan-ilham-dzaky" target="_blank" rel="noopener">LinkedIn</a></div></section>
+      <section class="section email"><span class="tag">E.</span><a href="mailto:ilhamdzaky@gmail.com">ilhamdzaky@gmail.com</a></section>
+    </div>
+  </div>
+
+  <div class="col-scroll">
+    <section class="section bio">
+      <p><span data-reveal="profile">Shafwan Ilham Dzaky</span> is a DevOps engineer based in Yogyakarta, Indonesia, focused on automated infrastructure, resilient systems, security-first architecture, and cloud-native CI/CD.</p>
+      <p>His work spans multi-cloud infrastructure, observability with Prometheus, Grafana, and the ELK stack, plus secure, scalable network design. He also reviews code for one of Indonesia's largest coding education platforms and holds an MTCNA certification.</p>
+    </section>
+
+    <section class="section list-section">
+      <div class="tab-header" role="tablist" aria-label="Portfolio content">
+        <button class="tab-label active" type="button" role="tab" aria-selected="true" aria-controls="work-panel" data-tab="work">Selected work ({{ len $portfolio.projects }})</button>
+        <button class="tab-label" type="button" role="tab" aria-selected="false" aria-controls="timeline-panel" data-tab="timeline">Timeline ({{ len $portfolio.timeline }})</button>
+      </div>
+
+      <ol id="work-panel" class="work-list" role="tabpanel" data-panel="work">
+        {{ range $i, $project := $portfolio.projects }}
+        <li class="work-item list-item-row" data-reveal="project">
+          <div class="work-num">{{ printf "%02d." (add $i 1) }}</div>
+          <div class="work-body">
+            <a href="{{ $project.github }}" target="_blank" rel="noopener" class="work-title">{{ $project.title }} <span class="ext-link">&nearr;</span></a>
+            <div class="work-field"><span class="field-label">Info.</span><span class="field-value">{{ $project.description }}</span></div>
+            <div class="work-field"><span class="field-label">Stack.</span><span class="field-value">{{ delimit (first 4 $project.tech) ", " }}</span></div>
+            <div class="work-field"><span class="field-label">Year.</span><span class="field-value">{{ $project.year }}</span></div>
+          </div>
+        </li>
+        {{ end }}
+      </ol>
+
+      <div id="timeline-panel" class="timeline-list" role="tabpanel" data-panel="timeline" hidden>
+        {{ range $i, $event := $portfolio.timeline }}
+        <div class="tl-event list-item-row" data-reveal="project">
+          <div class="tl-rail"><div class="tl-dot"></div>{{ if lt (add $i 1) (len $portfolio.timeline) }}<div class="tl-line"></div>{{ end }}</div>
+          <div class="tl-content">
+            {{ with $event.url }}<a class="tl-title" href="{{ . }}" target="_blank" rel="noopener">{{ $event.title }} <span class="ext-link">&nearr;</span></a>{{ else }}<span class="tl-title">{{ $event.title }}</span>{{ end }}
+            {{ if eq (len $event.roles) 1 }}{{ with index $event.roles 0 }}
+              <div class="work-field"><span class="field-label">Role.</span><span class="field-value">{{ .title }}</span></div>
+              <div class="work-field"><span class="field-label">Info.</span><span class="field-value">{{ .description }}</span></div>
+              <div class="work-field"><span class="field-label">Period.</span><span class="field-value">{{ .date }}</span></div>
+            {{ end }}{{ else }}
+              <div class="tl-roles">{{ range $ri, $role := $event.roles }}
+                <div class="tl-role-item{{ if eq (add $ri 1) (len $event.roles) }} tl-role-last{{ end }}"><div class="tl-rail-mini"><div class="tl-dot-mini"></div>{{ if lt (add $ri 1) (len $event.roles) }}<div class="tl-line-mini"></div>{{ end }}</div><div class="tl-role-content">
+                  <div class="work-field"><span class="field-label">Role.</span><span class="field-value">{{ $role.title }}</span></div>
+                  <div class="work-field"><span class="field-label">Info.</span><span class="field-value">{{ $role.description }}</span></div>
+                  <div class="work-field"><span class="field-label">Period.</span><span class="field-value">{{ $role.date }}</span></div>
+                </div></div>
+              {{ end }}</div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+  </div>
+</div>
+{{ end }}
