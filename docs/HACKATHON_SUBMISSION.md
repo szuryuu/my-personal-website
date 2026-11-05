@@ -1,6 +1,6 @@
 # AWS Student Builder Challenge — Project Submission
 
-> **Before publishing:** replace every `[TODO]` item, add the four screenshots below, and verify the live Amplify URL. This draft deliberately does not claim an AWS deployment that has not been completed.
+> **Before publishing:** replace every `[TODO]` item, capture the two AWS console screenshots below, and verify the live Amplify URL. This draft deliberately does not claim an AWS deployment that has not been completed.
 
 ## Project: A portfolio that responds to curiosity
 
@@ -33,7 +33,7 @@ The site includes the challenge's required portfolio sections:
 
 ### AWS service to use: AWS Amplify Hosting
 
-AWS Amplify Hosting will build and publish this Hugo static site from the GitHub repository. Amplify provides the managed hosting, HTTPS endpoint, and CDN-backed delivery needed to keep the portfolio publicly available during the judging window.
+AWS Amplify Hosting will build and publish this Hugo static site from the GitHub repository. `amplify.yml` defines the Hugo production build and `public` output directory. Amplify provides the managed hosting, HTTPS endpoint, and CDN-backed delivery needed to keep the portfolio publicly available during the judging window.
 
 | Setting | Value |
 | --- | --- |
@@ -56,8 +56,8 @@ AWS Amplify Hosting will build and publish this Hugo static site from the GitHub
 
 | Screenshot | What it must show | File |
 | --- | --- | --- |
-| Portfolio home | About Me, Skills, and Selected Work at the live URL | `[TODO: screenshots/portfolio-home.png]` |
-| Creative feature | A hover bloom or certificate-preview reveal in action | `[TODO: screenshots/creative-feature.png]` |
+| Portfolio home | About Me, Skills, and Selected Work | `docs/screenshots/portfolio-home.png` — recapture from the live URL before submission |
+| Creative feature | A hover bloom reveal in action | `docs/screenshots/creative-feature.png` — recapture from the live URL before submission |
 | AWS Amplify app | Amplify app overview with the deployed URL and successful status | `[TODO: screenshots/amplify-overview.png]` |
 | AWS Amplify build | Build history/log showing a successful Hugo deployment | `[TODO: screenshots/amplify-build.png]` |
 
