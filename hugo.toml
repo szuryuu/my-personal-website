@@ -1,4 +1,4 @@
-baseURL = "https://szuryuu.github.io/"
+baseURL = "/"
 languageCode = "en"
 title = "Shafwan Ilham Dzaky"
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
