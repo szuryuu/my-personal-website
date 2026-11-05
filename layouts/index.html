@@ -9,7 +9,7 @@
           <span class="mono">{{ now.Year }}</span>
           <span class="mono">Shafwan Ilham Dzaky</span>
         </div>
-        <div class="clock" aria-label="Current time in Yogyakarta and your timezone">
+        <div class="clock" role="group" aria-label="Current time in Yogyakarta and your timezone">
           <div class="clock-row">
             <span class="tag">T.</span><span class="mono clock-tz">YOG</span><span class="mono clock-time" data-jakarta-time>--:--:--</span><span class="mono clock-offset">GMT+7</span>
           </div>
@@ -33,6 +33,7 @@
       </div>
       <figure class="interactive-visual">
         <img src="{{ "interactive-placeholder.jpg" | relURL }}" alt="Shafwan Ilham Dzaky">
+        <div class="project-flow" aria-hidden="true"><span></span><b>&rarr;</b><span></span><b>&rarr;</b><span></span></div>
         <figcaption class="visual-caption">{{ sub now.Year 2007 }} years old<br>DevOps Engineer<br>Yogyakarta, Indonesia</figcaption>
       </figure>
     </section>
@@ -59,7 +60,7 @@
       <div id="work-panel" role="tabpanel" data-panel="work">
       <ol class="work-list">
         {{ range $i, $project := $portfolio.projects }}
-        <li class="work-item list-item-row" data-reveal="project">
+        <li class="work-item list-item-row" data-reveal="project" data-flow="{{ delimit $project.flow "|" }}">
           <div class="work-num">{{ printf "%02d." (add $i 1) }}</div>
           <div class="work-body">
             <a href="{{ $project.github }}" target="_blank" rel="noopener" class="work-title">{{ $project.title }} <span class="ext-link">&nearr;</span></a>
@@ -74,7 +75,7 @@
 
       <div id="timeline-panel" class="timeline-list" role="tabpanel" data-panel="timeline" hidden>
         {{ range $i, $event := $portfolio.timeline }}
-        <div class="tl-event list-item-row" data-reveal="project">
+        <div class="tl-event list-item-row" data-reveal="project" data-preview="{{ $event.image | relURL }}" data-preview-alt="{{ $event.imageAlt }}">
           <div class="tl-rail"><div class="tl-dot"></div>{{ if lt (add $i 1) (len $portfolio.timeline) }}<div class="tl-line"></div>{{ end }}</div>
           <div class="tl-content">
             {{ with $event.url }}<a class="tl-title" href="{{ . }}" target="_blank" rel="noopener">{{ $event.title }} <span class="ext-link">&nearr;</span></a>{{ else }}<span class="tl-title">{{ $event.title }}</span>{{ end }}

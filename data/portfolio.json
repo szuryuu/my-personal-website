@@ -5,56 +5,68 @@
       "description": "A production-grade GitOps monorepo deploying a Go/Nginx microservices architecture on a Terraform-provisioned Azure Kubernetes Service (AKS) cluster, featuring decoupled CI/CD and zero-credential security.",
       "tech": ["Azure", "AKS", "Terraform", "GitHub Actions", "Go (Gin)", "Nginx", "PostgreSQL", "Prometheus"],
       "year": "2026",
-      "github": "https://github.com/szuryuu/cloudops"
+      "github": "https://github.com/szuryuu/cloudops",
+      "flow": ["Push", "CI/CD", "AKS"]
     },
     {
       "title": "Dynamic VMSS Auto-Discovery & Mesh",
       "description": "An elastic Service Mesh architecture integrating Envoy Proxy with Azure Virtual Machine Scale Sets (VMSS), featuring metric-driven autoscaling and zero-downtime dynamic routing.",
       "tech": ["Go", "Envoy Proxy", "Terraform", "Azure VMSS", "Cloud-init"],
       "year": "2026",
-      "github": "https://github.com/szuryuu/auto-discover-vmss"
+      "github": "https://github.com/szuryuu/auto-discover-vmss",
+      "flow": ["VMSS", "Envoy", "Mesh"]
     },
     {
       "title": "LaporCepat: AI-Powered Disaster Reporting",
       "description": "A real-time emergency reporting system that replaces manual call centers with an AI pipeline (Groq Whisper STT + Gemini 2.5 Flash) for instant triage and live dispatch.",
       "tech": ["Nuxt 4", "Groq Whisper AI", "Google Gemini 2.5 Flash", "Firebase", "SSE", "Leaflet"],
       "year": "2025",
-      "github": "https://github.com/szuryuu/lapor-cepat-bpbd"
+      "github": "https://github.com/szuryuu/lapor-cepat-bpbd",
+      "flow": ["Report", "AI", "Dispatch"]
     },
     {
       "title": "MySQL Load Test",
       "description": "A high-performance load testing suite that captures real production traffic via PCAP analysis and replays it with weighted concurrency to accurately simulate database load.",
       "tech": ["Go", "Gopacket", "Prometheus", "MySQL"],
       "year": "2025",
-      "github": "https://github.com/szuryuu/mysql-load-test"
+      "github": "https://github.com/szuryuu/mysql-load-test",
+      "flow": ["PCAP", "Replay", "MySQL"]
     },
     {
       "title": "Azure End-to-End DevOps Pipeline",
       "description": "A production-ready CI/CD pipeline and immutable infrastructure setup on Azure, featuring automated security scanning, zero-secret authentication, and dynamic telemetry injection.",
       "tech": ["GitHub Actions", "Terraform", "Docker", "Azure", "Bash"],
       "year": "2026",
-      "github": "https://github.com/szuryuu/azure-e2e-devops"
+      "github": "https://github.com/szuryuu/azure-e2e-devops",
+      "flow": ["Commit", "Scan", "Azure"]
     },
     {
       "title": "Dokku Nginx Path",
       "description": "A Dokku plugin enabling path-based routing for multiple applications under a single domain, featuring automated Nginx configuration merging and unified SSL management.",
       "tech": ["Bash", "Go", "Nginx", "Dokku"],
       "year": "2025",
-      "github": "https://github.com/szuryuu/nginx-path-vhost"
+      "github": "https://github.com/szuryuu/nginx-path-vhost",
+      "flow": ["Route", "Nginx", "SSL"]
     }
   ],
   "timeline": [
     {
       "title": "Universitas Pembangunan Nasional \"Veteran\" Yogyakarta",
       "url": "https://www.upnyk.ac.id/",
+      "image": "/images/timeline/upn.jpg",
+      "imageAlt": "Universitas Pembangunan Nasional Veteran Yogyakarta logo",
       "roles": [{"title": "Informatics Student", "date": "2026 - Present", "description": "Studying Informatics."}]
     },
     {
       "title": "External Code Reviewer",
+      "image": "/images/timeline/dicoding.jpg",
+      "imageAlt": "Dicoding",
       "roles": [{"title": "Front End Code Reviewer", "date": "Sep 2025 - Present", "description": "Mentored developers through rigorous code reviews, enforcing scalable architecture and secure coding standards."}]
     },
     {
       "title": "Botika",
+      "image": "/images/timeline/botika.png",
+      "imageAlt": "Botika",
       "roles": [
         {"title": "DevOps Engineer Intern", "date": "Sep 2025 - Apr 2026", "description": "Transitioned to DevOps. Managed CI/CD pipelines, automated server provisioning, and implemented infrastructure monitoring."},
         {"title": "Full Stack Developer Intern", "date": "Jul 2025 - Aug 2025", "description": "Engineered backend services and optimized database queries to reduce system latency, ensuring the application foundation was ready for scalable deployment."}
@@ -63,10 +75,14 @@
     {
       "title": "SMK Negeri 2 Depok Sleman",
       "url": "https://www.smkn2depoksleman.sch.id/",
+      "image": "/images/timeline/smkn2depok.jpg",
+      "imageAlt": "SMK Negeri 2 Depok Sleman logo",
       "roles": [{"title": "Network and Application Information Systems", "date": "2022 - 2026", "description": "Completed a vocational program in network and application information systems."}]
     },
     {
       "title": "DBS Foundation Coding Camp",
+      "image": "/images/timeline/dbs.png",
+      "imageAlt": "DBS Foundation Coding Camp",
       "roles": [{"title": "Full Stack Web Developer", "date": "Jan 2025 - Apr 2025", "description": "Developed end-to-end applications with a strong emphasis on backend architecture, system performance optimization, and secure API integrations."}]
     }
   ],

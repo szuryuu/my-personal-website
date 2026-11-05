@@ -21,6 +21,9 @@
 
   const skills = document.querySelector(".skills");
   const visual = document.querySelector(".interactive-visual");
+  const visualImage = visual?.querySelector("img");
+  const projectFlow = visual?.querySelector(".project-flow");
+  const defaultVisualImage = visualImage?.getAttribute("src");
   const bloomOrigin = `polygon(${Array.from({ length: 18 }, () => "50% 50%").join(", ")})`;
   document.querySelectorAll("[data-reveal]").forEach((element) => {
     element.addEventListener("mouseenter", () => {
@@ -30,12 +33,23 @@
         const radius = 112 + (Math.random() - .5) * 20;
         return `${50 + Math.cos(angle) * radius}% ${50 + Math.sin(angle) * radius}%`;
       });
-      visual.style.clipPath = `polygon(${points.join(", ")})`;
+      visual.classList.add("is-resetting");
+      visual.style.clipPath = bloomOrigin;
+      void visual.offsetWidth;
+      if (visualImage) {
+        visualImage.src = element.dataset.preview || defaultVisualImage;
+        visualImage.alt = element.dataset.previewAlt || "Shafwan Ilham Dzaky";
+      }
+      const flow = element.dataset.flow?.split("|");
+      if (flow) projectFlow?.querySelectorAll("span").forEach((node, index) => { node.textContent = flow[index] || ""; });
       skills.classList.add("is-revealing");
+      skills.classList.toggle("project-active", Boolean(flow));
+      visual.classList.remove("is-resetting");
+      visual.style.clipPath = `polygon(${points.join(", ")})`;
       skills.classList.toggle("profile-active", element.dataset.reveal === "profile");
     });
     element.addEventListener("mouseleave", () => {
-      skills?.classList.remove("is-revealing", "profile-active");
+      skills?.classList.remove("is-revealing", "profile-active", "project-active");
       if (visual) visual.style.clipPath = bloomOrigin;
     });
   });
