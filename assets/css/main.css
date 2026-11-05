@@ -32,6 +32,7 @@ a { color: inherit; }
 .root a, .root a *, .root button, .root button * { cursor: pointer; }
 .root { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: clamp(48px, 6vw, 96px); padding: 0 24px 48px; max-width: 1200px; margin: 0 auto; }
 .col-sticky { position: sticky; top: 0; align-self: start; order: 1; display: flex; flex-direction: column; height: calc(100vh - 90px); height: calc(100dvh - 90px); justify-content: space-between; padding-top: 140px; text-align: left; }
+@media (min-width: 901px) { .root { zoom: .8; } .col-sticky { height: calc(125dvh - 112.5px); } }
 .col-scroll { order: 2; padding-top: 140px; }
 .section { margin-bottom: 0; }
 .tag { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
@@ -129,7 +130,7 @@ a { color: inherit; }
 .cert-preview { position: fixed; z-index: 999; width: 176px; height: 176px; overflow: hidden; border: 1px solid var(--hairline); background: var(--canvas); opacity: 0; pointer-events: none; will-change: transform, opacity; transition: opacity 220ms ease-out, transform 220ms ease-out; }
 .cert-preview img { display: block; width: 100%; height: 100%; object-fit: contain; }
 
-@media (max-width: 900px), (max-height: 700px) {
+@media (max-width: 900px) {
   .root { grid-template-columns: 1fr; gap: 0; padding: 48px 16px 32px; }
   .col-sticky { position: static; order: 1; height: auto; display: flex; flex-direction: column; overflow: visible; padding-top: 0; text-align: left; }
   .col-scroll { order: 2; padding-top: 48px; margin-bottom: 0; }
