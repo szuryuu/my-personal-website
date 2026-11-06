@@ -73,8 +73,6 @@ a { color: inherit; }
 
 .bio p { color: var(--ink-2); font-size: var(--text-body); line-height: var(--leading-body); letter-spacing: var(--tracking-body); margin: 0 0 1em; }
 .bio p:last-child { margin-bottom: 0; }
-.bio .interaction-hint { margin-top: 24px; color: var(--muted); font-size: var(--text-meta); line-height: var(--leading-meta); }
-.interaction-hint .tag { margin-right: 10px; }
 .socials { display: flex; align-items: flex-start; gap: 0; font-size: var(--text-meta); letter-spacing: var(--tracking-meta); margin-bottom: 16px; }
 .email { font-size: var(--text-meta); letter-spacing: var(--tracking-meta); margin-bottom: 16px; }
 .socials .tag, .email .tag { margin-right: 10px; }
